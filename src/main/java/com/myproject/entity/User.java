@@ -32,10 +32,11 @@ public class User {
     @Column(name = "address", nullable = false, length = 1000)
     private String address;
 
-//    private boolean verified = false;
-//
-//    private String verificationToken;
+    @Column(name = "password", nullable = false)
+    private String password;
 
+    @Column(name = "role", nullable = false)
+    private String role;
 
 
     public Long getId() {
@@ -94,20 +95,19 @@ public class User {
         this.address = address;
     }
 
-//    public boolean isVerified() {
-//        return verified;
-//    }
-//
-//    public void setVerified(boolean verified) {
-//        this.verified = verified;
-//    }
+    public String getPassword() {
+        return password;
+    }
 
-//    public String getVerificationToken() {
-//        return verificationToken;
-//    }
-//
-//    public void setVerificationToken(String verificationToken) {
-//        this.verificationToken = verificationToken;
-//    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }
